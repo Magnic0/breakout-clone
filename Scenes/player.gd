@@ -6,6 +6,7 @@ func _physics_process(_delta):
 	var direction = Input.get_axis("move_left", "move_right")
 	if direction:
 		velocity.x = direction * SPEED
+		print(position.x)
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 	
